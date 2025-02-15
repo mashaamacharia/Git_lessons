@@ -28,7 +28,7 @@ if (!isset($_SESSION['csrf_token'])) {
             <p class="mb-0">Login to access your admin dashboard</p>
         </div>
 
-        <form class="login-form" action="adminlogin_process.php" method="POST">
+        <form class="login-form" id="loginForm" action="adminlogin_process.php" method="POST" autocomplete="off">
             <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
 
             <div class="input-group mb-3">
@@ -36,7 +36,8 @@ if (!isset($_SESSION['csrf_token'])) {
                     <i class="fas fa-user input-icon"></i>
                 </span>
                 <div class="form-floating flex-grow-1">
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                        required>
                     <label for="username">Username</label>
                 </div>
             </div>
@@ -46,17 +47,18 @@ if (!isset($_SESSION['csrf_token'])) {
                     <i class="fas fa-lock input-icon"></i>
                 </span>
                 <div class="form-floating flex-grow-1">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                        required>
                     <label for="password">Password</label>
                 </div>
-                <span class="input-group-text password-toggle border-start-0">
-                    <i class="fas fa-eye"></i>
+                <span class="input-group-text password-toggle border-start-0" onclick="togglePassword()">
+                    <i class="fas fa-eye" id="toggleIcon"></i>
                 </span>
             </div>
 
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" name="remember_me">
                     <label class="form-check-label" for="rememberMe">
                         Remember me
                     </label>
@@ -64,7 +66,7 @@ if (!isset($_SESSION['csrf_token'])) {
                 <a href="#" class="forgot-password">Forgot Password?</a>
             </div>
 
-            <button type="submit" class="btn btn-login w-100 mb-3">
+            <button type="submit" class="btn btn-login w-100 mb-3" id="submitBtn">
                 <i class="fas fa-sign-in-alt me-2"></i>Login
             </button>
 
@@ -76,9 +78,9 @@ if (!isset($_SESSION['csrf_token'])) {
 
         <?php if (isset($_SESSION['error_message'])): ?>
             <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
-                <?php 
-                    echo $_SESSION['error_message']; 
-                    unset($_SESSION['error_message']);
+                <?php
+                echo htmlspecialchars($_SESSION['error_message']);
+                unset($_SESSION['error_message']);
                 ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -86,9 +88,9 @@ if (!isset($_SESSION['csrf_token'])) {
 
         <?php if (isset($_SESSION['success_message'])): ?>
             <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
-                <?php 
-                    echo $_SESSION['success_message']; 
-                    unset($_SESSION['success_message']);
+                <?php
+                echo htmlspecialchars($_SESSION['success_message']);
+                unset($_SESSION['success_message']);
                 ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -100,7 +102,7 @@ if (!isset($_SESSION['csrf_token'])) {
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/adminlogin.js"></script>
+  <script src="adminlogin.js"></script>
 </body>
 
 </html>

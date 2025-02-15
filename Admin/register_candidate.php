@@ -35,9 +35,9 @@
                 <button class="action-button primary" data-bs-toggle="modal" data-bs-target="#addCandidateModal">
                     <i class="fas fa-plus-circle me-2"></i>Add New Candidate
                 </button>
-                <button class="action-button btn btn-outline-secondary">
+                <!-- <button class="action-button btn btn-outline-secondary">
                     <i class="fas fa-download me-2"></i>Export Data
-                </button>
+                </button> -->
             </div>
 
             <!-- Search and Filter -->
@@ -47,19 +47,25 @@
                     <input type="text" id="searchInput" class="form-control" placeholder="Search candidates...">
                 </div>
                 <select id="facultyFilter" class="form-select">
-                    <option value="">All Faculties</option>
-                    <option value="Engineering">Engineering</option>
+                    <option value="" disabled selected>Choose faculty...</option>
+                    <option value="Science & Tech">Science & Tech</option>
+                    <option value="Law">Law</option>
+                    <option value="Agriculture">Agriculture</option>
                     <option value="Business">Business</option>
+                    <option value="Engineering">Engineering</option>
                     <option value="Education">Education</option>
-                    <option value="Science">Science</option>
-                    <option value="Arts">Arts</option>
+                    <option value="Environment">Environment</option>
+                    <option value="Humanities">Humanities</option>
+                    <option value="Nursing">Nursing</option>
                 </select>
                 <select id="positionFilter" class="form-select">
-                    <option value="">All Positions</option>
-                    <option value="President">President</option>
-                    <option value="Vice President">Vice President</option>
-                    <option value="Secretary">Secretary</option>
-                    <option value="Treasurer">Treasurer</option>
+                    <option value="" disabled selected>Choose position...</option>
+                    <option value="faculty-rep">Faculty-Rep</option>
+                    <option value="male-resident-rep">Male Resident-Rep</option>
+                    <option value="female-resident-rep">Female Resident-Rep</option>
+                    <option value="male-non-resident-rep">Male Non-Resident</option>
+                    <option value="female-non-resident-rep">Female Non-Resident</option>
+
                 </select>
             </div>
 
@@ -122,23 +128,28 @@
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Position</label>
-                            <select class="form-select" required>
-                                <option value="">Select Position</option>
-                                <option value="President">President</option>
-                                <option value="Vice President">Vice President</option>
-                                <option value="Secretary">Secretary</option>
-                                <option value="Treasurer">Treasurer</option>
+                            <select class="form-select" id="position" name="position" required>
+                                <option value="" disabled selected>Choose position...</option>
+                                <option value="faculty-rep">Faculty-Rep</option>
+                                <option value="male-resident-rep">Male Resident-Rep</option>
+                                <option value="female-resident-rep">Female Resident-Rep</option>
+                                <option value="male-non-resident-rep">Male Non-Resident</option>
+                                <option value="female-non-resident-rep">Female Non-Resident</option>
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Faculty</label>
-                            <select class="form-select" required>
-                                <option value="">Select Faculty</option>
-                                <option value="Engineering">Engineering</option>
+                            <select class="form-select" id="faculty" name="faculty" required>
+                                <option value="" disabled selected>Choose faculty...</option>
+                                <option value="Science & Tech">Science & Tech</option>
+                                <option value="Law">Law</option>
+                                <option value="Agriculture">Agriculture</option>
                                 <option value="Business">Business</option>
+                                <option value="Engineering">Engineering</option>
                                 <option value="Education">Education</option>
-                                <option value="Science">Science</option>
-                                <option value="Arts">Arts</option>
+                                <option value="Environment">Environment</option>
+                                <option value="Humanities">Humanities</option>
+                                <option value="Nursing">Nursing</option>
                             </select>
                         </div>
                         <div class="col-12">
@@ -157,6 +168,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="register_candidate.js"></script>
 </body>
 
 </html>
