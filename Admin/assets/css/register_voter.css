@@ -1,10 +1,15 @@
 
 :root {
-    --primary-color: #1a237e;
-    --secondary-color: #303f9f;
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
     --accent-color: #7c4dff;
-    --background-color: #f5f6fa;
+    --background-color: #333;
     --card-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    --card-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    --success-color: #1e7e34;
+    --success-bg: #e6f4ea;
+    --error-color: #dc3545;
+    --error-bg: #fce8e8;
 }
 
 body {
@@ -27,7 +32,7 @@ body {
     box-shadow: var(--card-shadow);
 }
 
-/* .stats-cards {
+.stats-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
@@ -50,7 +55,7 @@ body {
     font-size: 2rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
-} */
+}
 
 .main-content {
     background: white;
@@ -156,7 +161,7 @@ body {
 .action-icons i:hover {
     color: var(--accent-color);
 }
-.stats-cards {
+/* .stats-cards {
     margin: 20px 0;
     padding: 15px;
 }
@@ -195,4 +200,34 @@ body {
 .stat-card .text-muted {
     color: #888;
     font-size: 0.9rem;
+} */
+.message-overlay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    max-width: 350px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.message-overlay.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-success {
+    background-color: var(--success-bg);
+    color: var(--success-color);
+    border: 1px solid rgba(30, 126, 52, 0.2);
+}
+
+.message-error {
+    background-color: var(--error-bg);
+    color: var(--error-color);
+    border: 1px solid rgba(220, 53, 69, 0.2);
 }

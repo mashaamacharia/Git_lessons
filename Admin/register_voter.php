@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-md-4">
                         <select id="facultyFilter" class="form-select">
-                            <option value="" disabled selected>Choose faculty...</option>
+                            <option value="" selected>Choose faculty...</option>
                             <option value="Science & Tech">Science & Tech</option>
                             <option value="Law">Law</option>
                             <option value="Agriculture">Agriculture</option>
@@ -121,7 +121,7 @@
                         <div class="col-md-6">
                             <label class="form-label">Faculty</label>
                             <select name="faculty" class="form-select" required>
-                                <option value="" disabled selected>Choose faculty...</option>
+                                <option value="" selected>Choose faculty...</option>
                                 <option value="Science & Tech">Science & Tech</option>
                                 <option value="Law">Law</option>
                                 <option value="Agriculture">Agriculture</option>

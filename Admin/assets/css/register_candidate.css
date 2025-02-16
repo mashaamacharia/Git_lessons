@@ -1,10 +1,13 @@
-
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
-    --background-color: #ecf0f1;
+    --background-color: #333;
     --card-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    --success-color: #1e7e34;
+    --success-bg: #e6f4ea;
+    --error-color: #dc3545;
+    --error-bg: #fce8e8;
 }
 
 body {
@@ -139,19 +142,69 @@ body {
     box-shadow: none;
 }
 
+/* Updated Status Badge Styles */
 .status-badge {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
+    padding: 8px 20px;
+    border-radius: 25px;
     font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
 }
 
-.status-badge.active {
-    background: #2ecc71;
+.status-active {
+    background-color:#4caf50;
     color: white;
+    border: 1px solid rgba(30, 126, 52, 0.2);
 }
 
-.status-badge.pending {
-    background: #f1c40f;
+.status-inactive {
+    background-color:#f44336;
     color: white;
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+/* Django-like Message Styles */
+.message-overlay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    max-width: 350px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.message-overlay.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-success {
+    background-color: var(--success-bg);
+    color: var(--success-color);
+    border: 1px solid rgba(30, 126, 52, 0.2);
+}
+
+.message-error {
+    background-color: var(--error-bg);
+    color: var(--error-color);
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+/* Active/Inactive Status Modal Header Styles */
+.active-status {
+    background: green !important;
+    color: white !important;
+}
+
+.inactive-status {
+    background: red !important;
+    color: white !important;
 }
