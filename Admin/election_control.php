@@ -30,11 +30,10 @@
                 <!-- To be displayed here 48:00:00 -->
                 <small class="text-muted">Until election ends</small>
             </div>
-            <div class="status-card">
+            <!-- <div class="status-card">
                 <h3>Current Turnout</h3>
-                 <!-- To be displayed here  -->
                 <small class="text-muted">Of eligible voters</small>
-            </div>
+            </div> -->
         </div>
 
         <!-- Main Content -->
