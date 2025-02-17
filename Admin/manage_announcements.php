@@ -30,11 +30,6 @@
         <p class="h2 mb-0">0</p>
         <small class="text-muted">Currently visible</small>
       </div>
-      <div class="stat-card" id="draftAnnouncementsCard">
-        <h3>Draft Announcements</h3>
-        <p class="h2 mb-0">0</p>
-        <small class="text-muted">Not yet published</small>
-      </div>
     </div>
 
     <!-- Main Content -->
@@ -47,9 +42,6 @@
         <div>
           <button class="action-button btn btn-outline-secondary me-2" id="filterButton">
             <i class="fas fa-filter me-2"></i>Filter
-          </button>
-          <button class="action-button btn btn-outline-secondary" id="exportButton">
-            <i class="fas fa-download me-2"></i>Export
           </button>
         </div>
       </div>
@@ -193,6 +185,8 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="manage_announcements.js"></script>
   <!-- Include your custom JS file for announcement management -->
 </body>
 
