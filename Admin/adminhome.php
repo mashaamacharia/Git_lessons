@@ -28,8 +28,9 @@ if (!isset($_SESSION['admin_id']) || !$_SESSION['is_admin']) {
             <span class="brand-text">Admin Dashboard</span>
         </div>
         <div class="navbar-right">
-            <i class="fas fa-bell nav-icon"></i>
-            <i class="fas fa-cog nav-icon"></i>
+            <!-- <i class="fas fa-bell nav-icon"></i>
+    <i class="fas fa-cog nav-icon"></i> -->
+            <span class="admin-name"><?php echo $_SESSION['admin_username']; ?></span>
             <i class="fas fa-user-circle nav-icon"></i>
         </div>
     </nav>
