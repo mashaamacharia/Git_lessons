@@ -27,8 +27,7 @@
             </div>
             <div class="status-card">
                 <h3>Time Remaining</h3>
-                <!-- To be displayed here 48:00:00 -->
-                <small class="text-muted">Until election ends</small>
+                <!-- To be displayed here 48:00:00 --
             </div>
             <!-- <div class="status-card">
                 <h3>Current Turnout</h3>
