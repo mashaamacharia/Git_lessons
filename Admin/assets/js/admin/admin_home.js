@@ -17,7 +17,7 @@ $(document).ready(function() {
     // Function to fetch dashboard statistics
     function fetchDashboardStats() {
         $.ajax({
-            url: 'adminhome_process.php',
+            url: '../../models/admin/adminhome_process.php',
             type: 'GET',
             data: { action: 'fetch_stats' },
             dataType: 'json',

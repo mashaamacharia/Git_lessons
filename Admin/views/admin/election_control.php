@@ -7,7 +7,7 @@
     <title>Election Settings | Admin Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/election_control.css">
+    <link rel="stylesheet" href="../../assets/css/admin/election_control.css">
 </head>
 
 <body>
@@ -27,8 +27,8 @@
             </div>
             <div class="status-card">
                 <h3>Time Remaining</h3>
-                <!-- To be displayed here 48:00:00 --
-            </div>
+                <!-- To be displayed here 48:00:00 -->
+          </div>
             <!-- <div class="status-card">
                 <h3>Current Turnout</h3>
                 <small class="text-muted">Of eligible voters</small>
@@ -73,7 +73,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="election_control.js"></script>
+    <script src="../../assets/js/admin/election_control.js"></script>
 </body>
 
 </html>

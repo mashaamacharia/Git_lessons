@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'connection.php';
+require_once '../../controllers/connection.php';
 
 // Check if user is logged in and is admin
 if (!isset($_SESSION['admin_id']) || !$_SESSION['is_admin']) {

@@ -7,7 +7,7 @@
     <title>Manage Voters </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/register_voter.css">
+    <link rel="stylesheet" href="../../assets/css/admin/register_voter.css">
 </head>
 
 <body>
@@ -157,7 +157,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="voter.js"></script>
+    <script src="../../assets/js/admin/voter.js"></script>
 </body>
 
 </html>

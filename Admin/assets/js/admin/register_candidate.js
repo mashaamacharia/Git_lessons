@@ -18,7 +18,7 @@ $(document).ready(function () {
         formData.push({ name: 'action', value: action });
     
         $.ajax({
-            url: 'candidate-process.php',
+            url: '../../models/admin/candidate-process.php',
             type: 'POST',
             data: formData,
             dataType: 'json',
@@ -46,7 +46,7 @@ $(document).ready(function () {
     $('table').on('click', '.editCandidate', function () {
         var candidateId = $(this).data('id');
         $.ajax({
-            url: 'candidate-process.php',
+            url: '../../models/admin/candidate-process.php',
             type: 'GET',
             data: { action: 'get', id: candidateId },
             dataType: 'json',
@@ -97,7 +97,7 @@ $(document).ready(function () {
         showConfirm(confirmMessage).then(function (confirmed) {
             if (confirmed) {
                 $.ajax({
-                    url: 'candidate-process.php',
+                    url: '../../models/admin/candidate-process.php',
                     type: 'POST',
                     data: { action: 'ban', id: candidateId },
                     dataType: 'json',
@@ -123,7 +123,7 @@ $(document).ready(function () {
         showConfirm('Are you sure you want to delete this candidate?').then(function (confirmed) {
             if (confirmed) {
                 $.ajax({
-                    url: 'candidate-process.php',
+                    url: '../../models/admin/candidate-process.php',
                     type: 'POST',
                     data: { action: 'delete', id: candidateId },
                     dataType: 'json',
@@ -149,7 +149,7 @@ function fetchCandidates() {
     var position = $('#positionFilter').val();
   
     $.ajax({
-        url: 'candidate-process.php',
+        url: '../../models/admin/candidate-process.php',
         type: 'GET',
         data: { action: 'fetch', search: search, faculty: faculty, position: position },
         dataType: 'json',

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once  'connection.php';
+require_once  '../../controllers/connection.php';
 
 
 // Function to sanitize input
@@ -54,7 +54,7 @@ $ip_address = $_SERVER['REMOTE_ADDR'];
 if (!isset($_POST['csrf_token']) || !isset($_SESSION['csrf_token']) || 
     !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
     $_SESSION['error_message'] = "Invalid request verification. Please try again.";
-    header("Location: adminlogin.php");
+    header("Location: ../../views/admin/adminlogin.php");
     exit();
 }
 
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Basic validation
     if (empty($username) || empty($password)) {
         $_SESSION['error_message'] = "Please fill in all fields.";
-        header("Location: adminlogin.php");
+        header("Location: ../../views/admin/adminlogin.php");
         exit();
     }
 
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $attempts = check_login_attempts($conn, $username, $ip_address);
         if ($attempts >= 5) {
             $_SESSION['error_message'] = "Too many failed login attempts. Please try again after 15 minutes.";
-            header("Location: adminlogin.php");
+            header("Location: ../../views/admin/adminlogin.php");
             exit();
         }
 
@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if account is active
                 if ($admin['status'] != 1) {
                     $_SESSION['error_message'] = "Your account is currently inactive. Please contact the system administrator.";
-                    header("Location: adminlogin.php");
+                    header("Location: ../../views/admin/adminlogin.php");
                     exit();
                 }
 
@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Set success message and redirect
                 $_SESSION['success_message'] = "Welcome back, " . htmlspecialchars($admin['username']) . "!";
-                header("Location: adminhome.php");
+                header("Location: ../../views/admin/adminhome.php");
                 exit();
             } else {
                 // Record failed attempt
@@ -158,5 +158,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Redirect back to login page if we reach here (meaning login failed)
-header("Location: adminlogin.php");
+header("Location: ../../views/admin/adminlogin.php");
 exit();

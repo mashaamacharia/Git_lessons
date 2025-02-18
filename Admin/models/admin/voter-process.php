@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'connection.php';
+require_once '../../controllers/connection.php';
 
 class VoterManager {
     private $conn;

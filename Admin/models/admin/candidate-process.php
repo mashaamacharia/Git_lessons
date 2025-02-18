@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-require_once 'connection.php'; // Make sure this file sets up a MySQLi connection as $conn
+require_once '../../controllers/connection.php'; // Make sure this file sets up a MySQLi connection as $conn
 
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 

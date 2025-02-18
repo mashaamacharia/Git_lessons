@@ -9,7 +9,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/register_candidate.css" />
+  <link rel="stylesheet" href="../../assets/css/admin/register_candidate.css" />
   <style>
     /* Example styling for the modal header based on candidate status */
     .modal-header.active-status {
@@ -169,6 +169,6 @@
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
-  <script src="register_candidate.js"></script>
+  <script src="../../assets/js/admin/register_candidate.js"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@ $(document).ready(function(){
       formData.set('action', actionVal);
 
       $.ajax({
-          url: 'process_announcements.php',
+          url: '../../models/admin/process_announcements.php',
           type: 'POST',
           data: formData,
           dataType: 'json',
@@ -54,7 +54,7 @@ $(document).ready(function(){
   $(document).on('click', '.editAnnouncement', function(){
       let id = $(this).data('id');
       $.ajax({
-          url: 'process_announcements.php',
+          url: '../../models/admin/process_announcements.php',
           type: 'GET',
           data: { action: 'get', announcement_id: id },
           dataType: 'json',
@@ -94,7 +94,7 @@ $(document).ready(function(){
       showConfirm('Are you sure you want to delete this announcement?').then(function(confirmed) {
           if(confirmed){
               $.ajax({
-                  url: 'process_announcements.php',
+                  url: '../../models/admin/process_announcements.php',
                   type: 'POST',
                   data: { action: 'delete', announcement_id: id },
                   dataType: 'json',
@@ -121,7 +121,7 @@ $(document).ready(function(){
       let priority = $('#priorityFilter').val();
 
       $.ajax({
-          url: 'process_announcements.php',
+          url: '../../models/admin/process_announcements.php',
           type: 'GET',
           data: { action: 'fetch', search: search, status: status, priority: priority },
           dataType: 'json',

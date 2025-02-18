@@ -16,7 +16,7 @@ $(document).ready(function() {
     // Function to load election data from the server
     function loadElectionData() {
         $.ajax({
-            url: 'election_process.php',
+            url: '../../models/admin/election_process.php',
             type: 'GET',
             data: { action: 'get_status' },
             dataType: 'json',
@@ -53,7 +53,7 @@ $(document).ready(function() {
         }
 
         $.ajax({
-            url: 'election_process.php',
+            url: '../../models/admin/election_process.php',
             type: 'POST',
             data: {
                 action: 'update_settings',

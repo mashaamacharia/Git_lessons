@@ -2,7 +2,7 @@
 date_default_timezone_set('Africa/Nairobi'); // or your correct time zone
 
 // Include the connection file (adjust the path if needed)
-require_once 'connection.php';
+require_once '../../controllers/connection.php';
 
 // Use $conn as your database connection or alias it to $db
 $db = $conn;

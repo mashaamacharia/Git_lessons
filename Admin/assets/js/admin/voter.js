@@ -32,7 +32,7 @@ const voterManager = {
 
     updateTotalVoters: function() {
         $.ajax({
-            url: 'voter-process.php',
+            url: '../../models/admin/voter-process.php',
             type: 'POST',
             data: { action: 'get_total' },
             success: (response) => {
@@ -50,7 +50,7 @@ const voterManager = {
         formData.append('action', mode);
 
         $.ajax({
-            url: 'voter-process.php',
+            url: '../../models/admin/voter-process.php',
             type: 'POST',
             data: Object.fromEntries(formData),
             success: (response) => {
@@ -89,7 +89,7 @@ const voterManager = {
         form.find('input[name="idno"]').val(idNo);
         
         $.ajax({
-            url: 'voter-process.php',
+            url: '../../models/admin/voter-process.php',
             type: 'POST',
             data: {
                 action: 'get_voter_details',
@@ -115,7 +115,7 @@ const voterManager = {
         };
 
         $.ajax({
-            url: 'voter-process.php',
+            url: '../../models/admin/voter-process.php',
             type: 'POST',
             data: filters,
             success: (response) => {
@@ -136,7 +136,7 @@ const voterManager = {
                 if (!confirmed) return;
 
                 $.ajax({
-                    url: 'voter-process.php',
+                    url: '../../models/admin/voter-process.php',
                     type: 'POST',
                     data: {
                         action: 'delete',
@@ -171,7 +171,7 @@ const voterManager = {
                 if (!confirmed) return;
 
                 $.ajax({
-                    url: 'voter-process.php',
+                    url: '../../models/admin/voter-process.php',
                     type: 'POST',
                     data: {
                         action: 'update_status',

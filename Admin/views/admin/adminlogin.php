@@ -16,7 +16,7 @@ if (!isset($_SESSION['csrf_token'])) {
     <title>Admin Portal | Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/adminlogin.css">
+    <link rel="stylesheet" href="../../assets/css/admin/adminlogin.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@ if (!isset($_SESSION['csrf_token'])) {
             <p class="mb-0">Login to access your admin dashboard</p>
         </div>
 
-        <form class="login-form" id="loginForm" action="adminlogin_process.php" method="POST" autocomplete="off">
+        <form class="login-form" id="loginForm" action="../../models/admin/adminlogin_process.php" method="POST" autocomplete="off">
             <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
 
             <div class="input-group mb-3">
@@ -102,7 +102,8 @@ if (!isset($_SESSION['csrf_token'])) {
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="adminlogin.js"></script>
+    <script src="../../assets/js/admin/adminlogin.js"></script>
+
 </body>
 
 </html>
